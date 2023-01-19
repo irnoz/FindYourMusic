@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="SongTableViewCell" rowHeight="218" id="KGk-i7-Jjw" customClass="SongTableViewCell" customModule="FindYourMusic" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="499" height="218"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="499" height="218"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="7s8-zN-x0Y">
+                        <rect key="frame" x="10" y="10" width="198" height="198"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="198" id="gve-iU-fRw"/>
+                        </constraints>
+                    </imageView>
+                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="m68-BO-yFa">
+                        <rect key="frame" x="228" y="21" width="241" height="176"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LGD-Zi-1tW">
+                                <rect key="frame" x="0.0" y="0.0" width="241" height="83"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ics-ZQ-eI1">
+                                <rect key="frame" x="0.0" y="93" width="241" height="83"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="Ics-ZQ-eI1" firstAttribute="height" secondItem="LGD-Zi-1tW" secondAttribute="height" id="4PY-7Z-ecg"/>
+                            <constraint firstItem="Ics-ZQ-eI1" firstAttribute="width" secondItem="LGD-Zi-1tW" secondAttribute="width" id="TDK-pA-VRA"/>
+                            <constraint firstAttribute="trailing" secondItem="LGD-Zi-1tW" secondAttribute="trailing" id="U24-Sg-eVW"/>
+                            <constraint firstItem="LGD-Zi-1tW" firstAttribute="top" secondItem="m68-BO-yFa" secondAttribute="top" id="V5g-8X-IAI"/>
+                            <constraint firstItem="LGD-Zi-1tW" firstAttribute="leading" secondItem="m68-BO-yFa" secondAttribute="leading" id="emh-7l-55i"/>
+                        </constraints>
+                    </stackView>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="m68-BO-yFa" firstAttribute="leading" secondItem="7s8-zN-x0Y" secondAttribute="trailing" constant="20" id="5yA-oB-CxO"/>
+                    <constraint firstItem="m68-BO-yFa" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="10" id="5yu-86-0bN"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="m68-BO-yFa" secondAttribute="trailing" constant="10" id="7vY-6d-OFF"/>
+                    <constraint firstItem="7s8-zN-x0Y" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="ach-Al-qgz"/>
+                    <constraint firstItem="7s8-zN-x0Y" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="kUW-aV-8nv"/>
+                    <constraint firstAttribute="bottom" secondItem="7s8-zN-x0Y" secondAttribute="bottom" constant="10" id="yhf-0a-x2u"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="m68-BO-yFa" secondAttribute="bottom" constant="10" id="zMX-Wm-Rn7"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="artistName" destination="Ics-ZQ-eI1" id="WbB-ML-7Fk"/>
+                <outlet property="artwork" destination="7s8-zN-x0Y" id="dYg-rj-Nff"/>
+                <outlet property="trackName" destination="LGD-Zi-1tW" id="bsH-RN-tJ4"/>
+            </connections>
+            <point key="canvasLocation" x="257.25190839694653" y="80.281690140845072"/>
+        </tableViewCell>
+    </objects>
+</document>
